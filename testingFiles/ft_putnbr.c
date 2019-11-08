@@ -2,20 +2,17 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
-	if (nb < 0)
+	long num;
+
+	num = nb;
+	if (num < 0)
 	{
 		ft_putchar('-');
-		if (nb == -2147483648)
-		{
-			ft_putchar('2');
-			nb = 147483648;
-		}
-		else
-			nb = nb * -1;
+		num = num * -1;
 	}
-	if (nb >= 10)
+	if (num >= 10)
 	{
-		ft_putnbr(nb / 10);
+		ft_putnbr(num / 10);
 	}
-	ft_putchar((nb % 10) + '0');
+	ft_putchar((num % 10) + '0');
 }

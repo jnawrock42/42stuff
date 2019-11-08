@@ -11,7 +11,9 @@
 
 //prototype here
 
-int		main(int argc, char **argv)
+
+
+int		main(void)
 {
 	clock_t		t;
 	double		time_taken;
@@ -33,6 +35,25 @@ int		main(int argc, char **argv)
 
 /*
 
-
+$> make clean
+$> make
+$> ./do-op
+$> ./do-op 1 + 1
+2
+$> ./do-op 42amis - -20toto12
+62
+$> ./do-op 1 p 1
+0
+$> ./do-op 1 + toto3
+1
+$>
+$> ./do-op toto3 + 4
+4
+$> ./do-op foo plus bar
+0
+$> ./do-op 25 / 0
+Stop : division by zero
+$> ./do-op 25 % 0
+Stop : modulo by zero
 
 */
