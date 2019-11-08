@@ -1,0 +1,32 @@
+#include <stdlib.h>
+
+typedef    struct s_btree
+{
+    struct s_btree     *left;
+    struct s_btree     *right;
+    void *item;
+}                     t_btree;
+
+t_btree    *btree_create_node(void *item)
+{
+    t_btree            *bt;
+    
+    bt = NULL;
+    bt = (t_btree *)malloc(sizeof(t_btree));
+    if (bt)
+    {
+        bt->left = 0;
+        bt->right = 0;
+        bt->item = item;
+    }
+    return (bt);
+}
+
+void    main(int argc, char **argv)
+{
+    int i;
+    
+    i = 1;
+    while (i++ < argc)
+        btree_create_node(argv[i]);
+}
